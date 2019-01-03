@@ -12,7 +12,7 @@ namespace XBC.DataModel
 
         public long question_id { get; set; }
 
-        public long version_id { get; set; }
+        public long document_test_id { get; set; }
 
         public long created_by { get; set; }
 

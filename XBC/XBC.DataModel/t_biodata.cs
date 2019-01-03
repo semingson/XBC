@@ -84,6 +84,8 @@ namespace XBC.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t_assignment> t_assignment { get; set; }
 
+        public virtual t_bootcamp_test_type t_bootcamp_test_type { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t_clazz> t_clazz { get; set; }
 

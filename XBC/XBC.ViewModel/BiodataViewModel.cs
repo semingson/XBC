@@ -74,8 +74,14 @@ namespace XBC.ViewModel
         public string interviewer { get; set; }
 
         public long createdBy { get; set; }
-
         public DateTime createdOn { get; set; }
+
+        public long? modified_by { get; set; }
+        public DateTime? modified_on { get; set; }
+
+        public long? deleted_by { get; set; }
+
+        public DateTime? deleted_on { get; set; }
 
         public bool isDelete { get; set; }
 

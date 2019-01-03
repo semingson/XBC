@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -10,11 +9,13 @@ using XBC.MVC.WebApp.Models;
 using XBC.MVC.WebApp.Security;
 using XBC.Repo;
 using XBC.ViewModel;
-using XBD.DataModel;
+//using XBC.DataModel;
+using Microsoft.AspNet.Identity;
 
-namespace XBC.MVC.WebApp.Controllers
+
+namespace XBC.MVC.Controllers
 {
-  // [CustomAuthorize(Roles ="admin")]
+    // [CustomAuthorize(Roles ="admin")]
     public class UserController : Controller
     {
         // GET: User
@@ -38,7 +39,7 @@ namespace XBC.MVC.WebApp.Controllers
         {
             var userid = (long)Session["userid"];
             ViewBag.ListRole = new SelectList(RoleRepo.All(null), "id", "name");//untuk dropdownlist
-            ResponResultViewModel result = UserRepo.Update(model,userid);
+            ResponResultViewModel result = UserRepo.Update(model, userid);
             return Json(new
             {
                 success = result.Success,
@@ -55,7 +56,7 @@ namespace XBC.MVC.WebApp.Controllers
         [HttpPost]
         public ActionResult Edit(UserViewModel model)
         {
-             var userid = (long)Session["userid"];
+            var userid = (long)Session["userid"];
             ViewBag.ListRole = new SelectList(RoleRepo.All(null), "id", "name");//untuk dropdownlist
             ResponResultViewModel result = UserRepo.Update(model, userid);
             return Json(new
@@ -150,8 +151,8 @@ namespace XBC.MVC.WebApp.Controllers
             return PartialView();
         }
 
-        [HttpPost]
-        [AllowAnonymous]
+        //[HttpPost]
+        //[AllowAnonymous]
         //public ActionResult ForgotPassword(ViewModel.ForgotPasswordViewModel model)
         //{
         //    if (ModelState.IsValid)
@@ -186,5 +187,6 @@ namespace XBC.MVC.WebApp.Controllers
             authenticationManager.SignIn(id);
 
         }
+
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using XBC.MVC;
 using XBC.MVC.Controllers;
+using XBC.MVC.WebApp.Controllers;
 
 namespace XBC.Tests.Controllers
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XBC.ViewModel;
-using XBD.DataModel;
+using XBC.DataModel;
 
 namespace XBC.Repo
 {

@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountRepo.cs" />
     <Compile Include="AuditRepo.cs" />
     <Compile Include="BatchRepo.cs" />
     <Compile Include="BatchTestRepo.cs" />
@@ -64,11 +65,14 @@
     <Compile Include="BTRepo.cs" />
     <Compile Include="BTTRepo.cs" />
     <Compile Include="ClassRepo.cs" />
+    <Compile Include="MenuAcsesRepo.cs" />
+    <Compile Include="MenuRepo.cs" />
     <Compile Include="MonitoringRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TechnologyRepo.cs" />
     <Compile Include="TechTrainerRepo.cs" />
     <Compile Include="TrainerRepo.cs" />
+    <Compile Include="UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XBC.DataModel\XBC.DataModel.csproj">

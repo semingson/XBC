@@ -12,6 +12,7 @@ namespace XBC.DataModel
         {
         }
 
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<t_assignment> t_assignment { get; set; }
         public virtual DbSet<t_audit_log> t_audit_log { get; set; }
         public virtual DbSet<t_batch> t_batch { get; set; }
@@ -163,6 +164,11 @@ namespace XBC.DataModel
             modelBuilder.Entity<t_bootcamp_test_type>()
                 .Property(e => e.notes)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<t_bootcamp_test_type>()
+                .HasMany(e => e.t_biodata)
+                .WithOptional(e => e.t_bootcamp_test_type)
+                .HasForeignKey(e => e.bootcamp_test_type);
 
             modelBuilder.Entity<t_bootcamp_type>()
                 .Property(e => e.name)

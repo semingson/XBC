@@ -9,7 +9,9 @@ using XBC.MVC.WebApp.Models;
 using XBC.MVC.WebApp.Security;
 using XBC.Repo;
 using XBC.ViewModel;
-using XBC.DataModel;
+//using XBC.DataModel;
+using Microsoft.AspNet.Identity;
+
 
 namespace XBC.MVC.Controllers
 {
